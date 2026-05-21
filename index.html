@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+<div class="loader" id="loader">
+Loading Experience...
+</div>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -31,21 +36,90 @@ html {
   transform: translateY(-2px);
   box-shadow: 0 0 25px rgba(255,255,255,0.3);
 }
+
+<style>
+body{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+.glass-nav{
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.7);
+  border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+.hero-glow{
+  position:absolute;
+  width:500px;
+  height:500px;
+  background: radial-gradient(circle, rgba(99,102,241,0.18), transparent 70%);
+  filter: blur(60px);
+  top:-150px;
+  right:-100px;
+  z-index:0;
+}
+
+.card-modern{
+  background:white;
+  border-radius:24px;
+  padding:32px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.06);
+  transition:all .3s ease;
+}
+
+.card-modern:hover{
+  transform:translateY(-6px);
+}
+
+.btn-modern{
+  background:#111827;
+  color:white;
+  border-radius:999px;
+  padding:14px 28px;
+  transition:.3s;
+}
+
+.btn-modern:hover{
+  transform:scale(1.03);
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.faq-item{
+  background:white;
+  border-radius:20px;
+  padding:20px;
+  margin-bottom:16px;
+  box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.loader{
+  position:fixed;
+  inset:0;
+  background:white;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  font-weight:bold;
+}
+</style>
+
 </style>
 
 <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
     <style>
       .gradient {
-        background: linear-gradient(135deg, #0f172a 0%, #111827 35%, #1e293b 100%);
+        background: linear-gradient(135deg, #ffffff 0%, #f5f7ff 40%, #eef2ff 100%);
       }
     </style>
   </head>
-  <body class="leading-normal tracking-normal text-white gradient bg-gray-950" style="font-family: 'Source Sans Pro', sans-serif;">
+  <body class="leading-normal tracking-normal text-gray-900 gradient bg-white text-gray-800" style="font-family: 'Source Sans Pro', sans-serif;">
     <!--Nav-->
-    <nav id="header" class="fixed w-full z-30 top-0 text-white">
+    <nav id="header" class="fixed w-full z-30 top-0 text-gray-900">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center">
-          <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+          <a class="toggleColour text-gray-900 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
             <!--Icon from: http://www.potlabicons.com/ -->
             <svg class="h-8 fill-current inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
               <rect fill="#2a2a31" x="16.539" y="425.626" width="479.767" height="50.502" transform="matrix(1,0,0,1,0,0)" />
@@ -811,5 +885,75 @@ AOS.init({
   once: true
 });
 </script>
+
+<section class="py-24 px-6 bg-white" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-5xl font-bold mb-6 text-gray-900">Simple Pricing</h2>
+    <p class="text-gray-500 mb-16">Choose the perfect plan for your business.</p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-modern">
+        <h3 class="text-2xl font-bold mb-4">Starter</h3>
+        <p class="text-5xl font-bold mb-6">$19</p>
+        <button class="btn-modern">Get Started</button>
+      </div>
+
+      <div class="card-modern border-2 border-indigo-500">
+        <h3 class="text-2xl font-bold mb-4">Pro</h3>
+        <p class="text-5xl font-bold mb-6">$49</p>
+        <button class="btn-modern">Most Popular</button>
+      </div>
+
+      <div class="card-modern">
+        <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+        <p class="text-5xl font-bold mb-6">$99</p>
+        <button class="btn-modern">Contact Sales</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 px-6 bg-gray-50" data-aos="fade-up">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-5xl font-bold text-center mb-16 text-gray-900">Testimonials</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-modern">
+        <p class="text-gray-600">“Super clean and modern design.”</p>
+      </div>
+
+      <div class="card-modern">
+        <p class="text-gray-600">“Feels like a premium SaaS website.”</p>
+      </div>
+
+      <div class="card-modern">
+        <p class="text-gray-600">“Very smooth and responsive.”</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 px-6 bg-white" data-aos="fade-up">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-5xl font-bold text-center mb-16 text-gray-900">FAQ</h2>
+
+    <div class="faq-item">
+      <h3 class="font-bold text-xl mb-2">Is this mobile responsive?</h3>
+      <p class="text-gray-600">Yes, fully responsive for all devices.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="font-bold text-xl mb-2">Can I deploy to Netlify?</h3>
+      <p class="text-gray-600">Yes, it's ready for deployment.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+window.addEventListener("load", function(){
+  document.getElementById("loader").style.display = "none";
+});
+</script>
+
 </body>
 </html>
